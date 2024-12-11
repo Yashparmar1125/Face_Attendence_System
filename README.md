@@ -16,7 +16,23 @@ The project integrates a camera feed, processes images to detect and recognize f
 - **Web Interface**: Built using Flask to interact with the system and manage records.
   
 ---
+## Project Gallery
 
+Here are some screenshots of the application in action:
+
+### 1. Home Page (Add Person and View Attendance)
+![Home Page](https://github.com/Face_Attendence_System/Screenshots/home.png)
+
+### 2. Add Person Form
+![Add Person Form](https://github.com/Face_Attendence_System/Screenshots/AddStudent.png)
+
+### 3. Face Recognition in Action
+![Face Recognition](https://github.com/Face_Attendence_System/Screenshots/attendence.png)
+
+### 4. Students Logs 
+![Attendance Logs](https://github.com/Face_Attendence_System/Screenshots/Students.png)
+
+---
 ## Installation
 
 ### Prerequisites
