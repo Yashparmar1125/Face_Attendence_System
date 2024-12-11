@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "head.html" %}
+    <style>
+        /* General Section Styling */
+        section {
+            padding: 60px 0;
+            background-color: #f5f6fa; /* Soft off-white background */
+        }
+
+        /* Heading Styling */
+        h3 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50; /* Dark gray for headings */
+            margin-bottom: 30px;
+        }
+
+        /* Button Styling */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .btn-lg {
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-success {
+            background-color: #28c76b; /* Fresh green */
+            color: white;
+        }
+
+        .btn-success:hover {
+            background-color: #1e9a4f; /* Darker green on hover */
+            transform: translateY(-2px);
+        }
+
+        .btn-info {
+            background-color: #3498db; /* Calm blue */
+            color: white;
+        }
+
+        .btn-info:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+            transform: translateY(-2px);
+        }
+
+        /* Table Styling */
+        .table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .table th, .table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #ecf0f1;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .table tbody tr:hover {
+            background-color: #d0e9f5; /* Soft light blue hover effect */
+        }
+
+        /* Hover Effects for Table Rows */
+        .table tbody tr:hover {
+            background-color: #f4f6f8;
+            cursor: pointer;
+        }
+
+        .table tbody td {
+            color: #7f8c8d;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .table {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            .button-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Ensures content is centered */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-container p {
+            margin: 0;
+        }
+
+        /* Ensuring the footer stays at the bottom */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    {% include "navbar.html" %}
+
+    <div class="wrapper">
+        <!-- Main content section -->
+        <section class="py-1 content">
+            <div class="container">
+                <h3>Student Data</h3>
+                <hr>
+
+                <!-- Button Container -->
+                <div class="button-container">
+                    <a href="/addprsn" type="button" class="btn btn-success btn-lg"><b>Add Student</b></a>
+                    <a href="/fr_page" type="button" class="btn btn-info btn-lg"><b>Mark Attendance</b></a>
+                </div>
+
+                <!-- Table for Student Data (currently commented out) -->
+                <!--
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Student Id</th>
+                                <th>Name</th>
+                                <th>Branch</th>
+                                <th>Active</th>
+                                <th>Added</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in data %}
+                                <tr>
+                                    <td>{{ item[0] }}</td>
+                                    <td>{{ item[1] }}</td>
+                                    <td>{{ item[2] }}</td>
+                                    <td>{{ item[3] }}</td>
+                                    <td>{{ item[4] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        {% include "footer.html" %}
+    </div>
+
+</body>
+</html>

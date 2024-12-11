@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "head.html" %}
+    <style>
+        /* Main Background Color */
+        body {
+            background-color: #f1f1f1; /* Light gray background */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #0062cc; /* Primary color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+
+        .navbar-brand {
+            font-size: 1.2rem;
+            color: #f1f1f1;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1rem;
+            color: #f1f1f1;
+            padding: 12px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Navbar Links Hover */
+        .navbar-nav .nav-link:hover {
+            background-color: #ff6f61; /* Secondary color on hover */
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-color: #0062cc; /* Primary color */
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero-description {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .hero-button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #ff6f61; /* Secondary color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-button:hover {
+            background-color: #e05550; /* Slightly darker red for hover */
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 60px 20px;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px); /* Hover effect for cards */
+        }
+
+        .card-header {
+            background-color: #ff6f61; /* Secondary color for card header */
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .card-body {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #343a40; /* Dark background for footer */
+            color: #f1f1f1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #f1f1f1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ff6f61; /* Secondary color on hover */
+        }
+
+        /* Ensure the footer stays at the bottom */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Wrapper to ensure footer stays at the bottom -->
+<div class="wrapper">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg py-2 navbar-dark shadow-sm">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <!-- Logo Image -->
+                <img src="{{ url_for('static', filename='img/logo.png') }}" width="45" alt="" class="d-inline-block align-middle mr-2">
+                <!-- Logo Text -->
+                <span class="font-weight-bold">Face Recognition Attendance System</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="background-color: #f1f1f1;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/students">Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/attendance">Attendance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Welcome to Face Recognition Attendance System</h1>
+            <p class="hero-description">Streamline your attendance process with automated face recognition technology. Monitor and track attendance in real-time.</p>
+            <a href="/attendance" class="hero-button">Mark Attendance</a>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Add Student</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Quickly add new students to the system to start tracking attendance.</p>
+                            <a href="/addprsn" class="btn btn-primary">Add Student</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>View Attendance</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Check real-time attendance records of students.</p>
+                            <a href="/attendance" class="btn btn-primary">View Attendance</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Training Classifier</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Train the facial recognition model to improve accuracy.</p>
+                            <a href="/train_classifier" class="btn btn-primary">Train Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {% include "footer.html" %}
+</div>
+
+</body>
+</html>

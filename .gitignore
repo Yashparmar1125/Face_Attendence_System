@@ -1,0 +1,7 @@
+*.pyc
+__pycache__/
+.env
+dataset/
+classifier.xml
+*.log
+*.sqlite3

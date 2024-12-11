@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-lg py-2 navbar-dark shadow-sm" style="background-color: #0062cc;">
+    <div class="container">
+        <!-- Logo with Text (Aligned Left) -->
+        <a href="#" class="navbar-brand d-flex align-items-center">
+            <!-- Logo Image -->
+            <img src="{{ url_for('static', filename='img/logo.png') }}" width="45" alt="" class="d-inline-block align-middle mr-2">
+            <!-- Logo Text -->
+            <span class="font-weight-bold" style="color: #f1f1f1;">Attendence System</span>
+        </a>
+
+        <!-- Navbar Toggler for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="background-color: #f1f1f1;"></span>
+        </button>
+
+        <!-- Navbar Links (Aligned Right) -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" style="color: #f1f1f1; transition: background-color 0.3s ease;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/students" style="color: #f1f1f1; transition: background-color 0.3s ease;">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/attendance" style="color: #f1f1f1; transition: background-color 0.3s ease;">Attendance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout" style="color: #f1f1f1; transition: background-color 0.3s ease;">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Add custom styles -->
+<style>
+    /* Navbar Styling */
+    .navbar {
+        background-color: #0062cc; /* Primary color for the background */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+        color: #f1f1f1; /* Light text for brand name */
+    }
+
+    .navbar-toggler {
+        border-color: #fff; /* White border for the toggler */
+    }
+
+    .navbar-toggler-icon {
+        background-color: #f1f1f1; /* White hamburger icon */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        padding: 12px 20px;
+        margin-right: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover Effect for Navbar Links */
+    .navbar-nav .nav-link:hover {
+        background-color: #ff6f61; /* Secondary color for hover effect */
+        color: #fff; /* Ensure text color is white on hover */
+    }
+
+    /* Active Navbar Link */
+    .navbar-nav .nav-item.active .nav-link {
+        background-color: #ff6f61; /* Secondary color for active item */
+        color: #fff; /* White text on active link */
+    }
+
+    /* Responsive Navbar */
+    @media (max-width: 768px) {
+        .navbar-nav {
+            text-align: center;
+        }
+    }
+</style>
