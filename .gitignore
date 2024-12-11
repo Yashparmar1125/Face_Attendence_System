@@ -5,3 +5,6 @@ dataset/
 classifier.xml
 *.log
 *.sqlite3
+
+.idea/
+
