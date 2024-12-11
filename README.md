@@ -24,7 +24,7 @@ Here are some screenshots of the application in action:
 ![Home Page](https://github.com/Face_Attendence_System/Screenshots/home.png)
 
 ### 2. Add Person Form
-![Add Person Form](https://github.com/Face_Attendence_System/Screenshots/AddStudent.png)
+![Add Person Form](https://github.com/Yashparmar1125/Face_Attendence_System/blob/master/Screenshots/AddStudent.png)
 
 ### 3. Face Recognition in Action
 ![Face Recognition](https://github.com/Face_Attendence_System/Screenshots/attendence.png)
